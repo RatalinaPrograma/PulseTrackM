@@ -1,32 +1,50 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>historial-casos</ion-title>
+    <ion-title>Historial de Casos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-item-group>
-    <ion-item-divider>
-      <ion-label>Filtros de Búsqueda</ion-label>
-    </ion-item-divider>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-    <ion-item>
-      <ion-label>Rango de Fechas</ion-label>
-      <ion-datetime display-format="DD/MM/YYYY" placeholder="Seleccionar Fecha Inicio"></ion-datetime>
-      <ion-datetime display-format="DD/MM/YYYY" placeholder="Seleccionar Fecha Fin"></ion-datetime>
-    </ion-item>
+  <!-- Filtros de Búsqueda -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Filtros de Búsqueda</ion-card-title>
+    </ion-card-header>
 
-    <ion-item>
-      <ion-label>Tipo de Emergencia</ion-label>
-      <ion-select placeholder="Seleccionar Tipo">
-        <ion-select-option value="accidente">Accidente</ion-select-option>
-        <ion-select-option value="infarto">Infarto</ion-select-option>
-        <ion-select-option value="otro">Otro</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-label position="stacked">Rango de Fechas</ion-label>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-md="6">
+            <ion-item>
+              <ion-label position="stacked">Desde</ion-label>
+              <ion-datetime display-format="DD/MM/YYYY" placeholder="Seleccionar Fecha Inicio"></ion-datetime>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="6">
+            <ion-item>
+              <ion-label position="stacked">Hasta</ion-label>
+              <ion-datetime display-format="DD/MM/YYYY" placeholder="Seleccionar Fecha Fin"></ion-datetime>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
-    <ion-button expand="block" color="primary">Aplicar Filtros</ion-button>
-  </ion-item-group>
+      <ion-item>
+        <ion-label>Tipo de Emergencia</ion-label>
+        <ion-select placeholder="Seleccionar Tipo">
+          <ion-select-option value="accidente">Accidente</ion-select-option>
+          <ion-select-option value="infarto">Infarto</ion-select-option>
+          <ion-select-option value="otro">Otro</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button expand="block" color="primary">Aplicar Filtros</ion-button>
+    </ion-card-content>
+  </ion-card>
 
   <!-- Lista de Casos Anteriores -->
   <!--<ion-list>
@@ -40,13 +58,16 @@
     </ion-item>
   </ion-list>-->
 
-
   <!-- Opciones de Exportación -->
-  <ion-item-group>
-    <ion-item-divider>
-      <ion-label>Exportar Informes</ion-label>
-    </ion-item-divider>
-    <ion-button expand="block" color="secondary">Exportar como PDF</ion-button>
-    <ion-button expand="block" color="secondary">Exportar como Excel</ion-button>
-  </ion-item-group>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Exportar Informes</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button expand="block" color="secondary">Exportar como PDF</ion-button>
+      <ion-button expand="block" color="secondary">Exportar como Excel</ion-button>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

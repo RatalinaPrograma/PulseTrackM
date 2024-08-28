@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'sel-hospital',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
