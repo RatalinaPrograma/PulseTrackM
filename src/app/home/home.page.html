@@ -1,20 +1,82 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu side="start" menuId="emergenciasMenu" contentId="emergenciasContent">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>Menú</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/nueva-emergencia" routerDirection="root">
+        <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+        <ion-label>Nueva Emergencia</ion-label>
+      </ion-item>
+      <ion-item routerLink="/historial-casos" routerDirection="root">
+        <ion-icon name="document-text-outline" slot="start"></ion-icon>
+        <ion-label>Historial</ion-label>
+      </ion-item>
+      <ion-item routerLink="/configuracion-noti" routerDirection="root">
+        <ion-icon name="settings-outline" slot="start"></ion-icon>
+        <ion-label>Configuraciones</ion-label>
+      </ion-item>
+      <ion-item routerLink="/soporte-tecnico" routerDirection="root">
+        <ion-icon name="construct-outline" slot="start"></ion-icon>
+        <ion-label>Soporte técnico</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="emergenciasMenu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Menú principal</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content id="emergenciasContent">
+
+  <ion-title>
+    <div id="reloj">{{horaActual}}</div>
+  </ion-title>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Emergencias Activas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Aquí se listarán las emergencias activas -->
+      <ion-list>
+        <ion-item *ngFor="let emergencia of emergenciasActivas">
+          <ion-label>
+            <h2>{{ emergencia.titulo }}</h2>
+            <p>{{ emergencia.descripcion }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="primary" (click)="nuevaEmergencia()" routerLink="/nueva-emergencia"
+          routerDirection="root">Nueva Emergencia</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="secondary" (click)="verHistorial()" routerLink="/historial-casos"
+          routerDirection="root">Historial</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/configuraciones"
+          routerDirection="root">Configuraciones</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
