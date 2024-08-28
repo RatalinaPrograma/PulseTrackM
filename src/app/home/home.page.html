@@ -34,7 +34,7 @@
       <ion-menu-button menu="emergenciasMenu"></ion-menu-button>
     </ion-buttons>
     <ion-title>Menú principal</ion-title>
-    
+
   </ion-toolbar>
 </ion-header>
 
@@ -61,7 +61,7 @@
       </ion-list>
     </ion-card-content>
   </ion-card>
-  
+
 
   <ion-grid>
     <ion-row>
@@ -74,8 +74,32 @@
           routerDirection="root">Historial</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/configuraciones"
-          routerDirection="root">Configuraciones</ion-button>
+        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/configuracion-noti"
+          routerDirection="root">Configuracion notificaciones</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/chat-vivo"
+          routerDirection="root">Chat en vivo</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/login-paramedico"
+          routerDirection="root">Login paramédico</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/configuracion-unidad"
+          routerDirection="root">Configuracion unidad</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/historial-casos"
+          routerDirection="root">Historial de casos</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/preferencia-hospital"
+          routerDirection="root">Seleccionar preferencia de hospitales</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/soporte-tecnico"
+          routerDirection="root">Soporte técnico</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

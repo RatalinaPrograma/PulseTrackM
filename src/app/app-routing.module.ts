@@ -87,6 +87,25 @@ const routes: Routes = [
     path: 'legal-privacidad',
     loadChildren: () => import('./pages/legal-privacidad/legal-privacidad.module').then( m => m.LegalPrivacidadPageModule)
   },
+  {
+    path: 'register-paramedico',
+    loadChildren: () => import('./pages/register-paramedico/register-paramedico.module').then( m => m.RegisterParamedicoPageModule)
+  },
+  {
+    path: 'login-paramedico',
+    loadChildren: () => import('./pages/login-paramedico/login-paramedico.module').then( m => m.LoginParamedicoPageModule)
+  },
+  {
+    path: 'manage-paramedicos',
+    loadChildren: () => import('./manage-paramedicos/manage-paramedicos.module').then( m => m.ManageParamedicosPageModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
+  },
+
+
+
 ];
 
 @NgModule({
