@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>nueva-emergencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+
+    <!-- Formulario de Datos Básicos del Paciente -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Formulario Inicial</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Nombre Completo</ion-label>
+          <ion-input placeholder="Ingrese el nombre del paciente"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Fecha de Nacimiento</ion-label>
+          <ion-datetime display-format="DD/MM/YYYY" placeholder="Seleccione la fecha"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Género</ion-label>
+          <ion-select placeholder="Seleccione el género">
+            <ion-select-option value="masculino">Masculino</ion-select-option>
+            <ion-select-option value="femenino">Femenino</ion-select-option>
+            <ion-select-option value="otro">Otro</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Número de Identificación</ion-label>
+          <ion-input placeholder="Ingrese el número de identificación"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Teléfono de Contacto</ion-label>
+          <ion-input type="tel" placeholder="Ingrese el teléfono de contacto"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Botón para Continuar -->
+    <ion-footer>
+      <ion-toolbar>
+        <ion-button expand="block" color="primary">Continuar a Detalles Médicos</ion-button>
+      </ion-toolbar>
+    </ion-footer>
+  
+  </ion-content>
+</ion-content>

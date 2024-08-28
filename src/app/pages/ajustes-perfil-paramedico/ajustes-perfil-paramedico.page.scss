@@ -1,0 +1,31 @@
+.profile-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-picture img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 16px;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  ion-card-title {
+    font-weight: bold;
+  }
+  
+  ion-item {
+    margin-bottom: 10px;
+  }
+  

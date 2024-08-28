@@ -1,0 +1,104 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>configuracion-unidad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+
+    <!-- Sección de Detalles de la Ambulancia -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Detalles de la Ambulancia</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Número de Unidad</ion-label>
+          <ion-text>AMB-1024</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Modelo</ion-label>
+          <ion-text>Ford Transit 2021</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Matrícula</ion-label>
+          <ion-text>XYZ-1234</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Ubicación Actual</ion-label>
+          <ion-text>Centro de Salud Norte</ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Sección de Equipo Disponible -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Equipo Disponible</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>Desfibrilador</ion-label>
+            <ion-text>Disponible</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-label>Oxígeno</ion-label>
+            <ion-text>Completo</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-label>Botiquín</ion-label>
+            <ion-text>Completo</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-label>Camilla</ion-label>
+            <ion-text>Operativa</ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Sección de Estado de la Unidad -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Estado de la Unidad</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Estado</ion-label>
+          <ion-text>En Servicio</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Último Mantenimiento</ion-label>
+          <ion-text>01/08/2024</ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Sección de Configuración de Disponibilidad -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Configuración de Disponibilidad</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Disponible para Nuevos Casos</ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>Notificaciones de Emergencia</ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Botones de Acción -->
+    <ion-footer>
+      <ion-toolbar>
+        <ion-button expand="block" color="primary">Guardar Configuración</ion-button>
+      </ion-toolbar>
+    </ion-footer>
+  
+  </ion-content>
+</ion-content>

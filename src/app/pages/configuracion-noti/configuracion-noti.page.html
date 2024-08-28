@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>configuracion-noti</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+
+    <!-- Sección de Ajustes de Alertas y Actualizaciones -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Ajustes de Alertas y Actualizaciones</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Recibir Alertas</ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>Actualizaciones de Casos</ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>Comunicaciones Internas</ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Sección de Preferencias de Sonido -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Preferencias de Sonido</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Sonido de Notificaciones</ion-label>
+          <ion-select placeholder="Seleccionar Sonido">
+            <ion-select-option value="beep">Beep</ion-select-option>
+            <ion-select-option value="chime">Chime</ion-select-option>
+            <ion-select-option value="alert">Alert</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>Volumen de Notificaciones</ion-label>
+          <ion-range min="0" max="100" pin="true"></ion-range>
+        </ion-item>
+        <ion-item>
+          <ion-label>Vibración</ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Sección de Preferencias de Visualización -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Preferencias de Visualización</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Modo Oscuro</ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label>Tamaño de Fuente</ion-label>
+          <ion-select placeholder="Seleccionar Tamaño">
+            <ion-select-option value="small">Pequeño</ion-select-option>
+            <ion-select-option value="medium">Mediano</ion-select-option>
+            <ion-select-option value="large">Grande</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Botones de Acción -->
+    <ion-footer>
+      <ion-toolbar>
+        <ion-button expand="block" color="primary">Guardar Ajustes</ion-button>
+      </ion-toolbar>
+    </ion-footer>
+  
+  </ion-content>
+</ion-content>

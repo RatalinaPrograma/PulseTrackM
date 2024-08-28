@@ -1,0 +1,93 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>detalles-caso-anterior</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <<ion-content>
+
+    <!-- Información del Caso -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Información del Caso</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Fecha y Hora</ion-label>
+          <ion-text>24/08/2024 - 14:35</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Tipo de Emergencia</ion-label>
+          <ion-text>Infarto</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Estado</ion-label>
+          <ion-text>Resuelto</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Lugar del Incidente</ion-label>
+          <ion-text>Hospital General</ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Comunicación -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Comunicación</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-icon slot="start" name="chatbox"></ion-icon>
+            <ion-label>
+              <h2>24/08/2024 - Llamada</h2>
+              <p>Confirmación de traslado</p>
+            </ion-label>
+            <ion-button fill="clear" color="primary">Ver Detalles</ion-button>
+          </ion-item>
+          <ion-item>
+            <ion-icon slot="start" name="mail"></ion-icon>
+            <ion-label>
+              <h2>25/08/2024 - Email</h2>
+              <p>Envío de informe inicial</p>
+            </ion-label>
+            <ion-button fill="clear" color="primary">Ver Detalles</ion-button>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Resultados -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Resultados</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Acciones Tomadas</ion-label>
+          <ion-text>Paciente estabilizado y trasladado a UCI</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Conclusión</ion-label>
+          <ion-text>Recuperación favorable, alta programada</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Informe</ion-label>
+          <ion-button color="secondary">Ver Informe Completo</ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button color="secondary">Exportar Informe</ion-button>
+        <ion-button color="primary">Editar Caso</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

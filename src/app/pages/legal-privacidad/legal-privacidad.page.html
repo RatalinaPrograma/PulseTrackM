@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>legal-privacidad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+
+    <!-- Sección de Términos de Servicio -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Términos de Servicio</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-textarea readonly>
+          <!-- Aquí puedes incluir un extracto o resumen de los términos de servicio -->
+          Estos términos de servicio rigen el uso de esta aplicación. Al utilizar la aplicación, usted acepta cumplir con estos términos...
+        </ion-textarea>
+        <ion-button expand="block" color="secondary">Leer Términos Completos</ion-button>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Sección de Política de Privacidad -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Política de Privacidad</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-textarea readonly>
+          <!-- Aquí puedes incluir un extracto o resumen de la política de privacidad -->
+          Nuestra política de privacidad describe cómo manejamos y protegemos su información personal. Al utilizar nuestra aplicación, usted consiente...
+        </ion-textarea>
+        <ion-button expand="block" color="secondary">Leer Política Completa</ion-button>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Sección de Opciones -->
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-label>Acepto los Términos de Servicio y la Política de Privacidad</ion-label>
+        </ion-item>
+        <ion-button expand="block" color="primary">Aceptar y Continuar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  
+  </ion-content>
+</ion-content>

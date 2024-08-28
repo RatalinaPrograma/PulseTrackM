@@ -1,0 +1,123 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>resumen-caso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Detalles del Paciente</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nombre del Paciente</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Edad</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Género</ion-label>
+        <ion-select>
+          <ion-select-option>Masculino</ion-select-option>
+          <ion-select-option>Femenino</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">ID del Paciente</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Fecha de Ingreso</ion-label>
+        <ion-datetime></ion-datetime>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Signos Vitales -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Signos Vitales</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Frecuencia Cardíaca (bpm)</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Presión Arterial</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Temperatura Corporal (°C)</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Saturación de Oxígeno (%)</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Frecuencia Respiratoria (rpm)</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Nivel de Urgencia -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nivel de Urgencia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-segment>
+        <ion-segment-button value="baja">
+          <ion-label>Baja</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="media">
+          <ion-label>Media</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="alta">
+          <ion-label>Alta</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="critica">
+          <ion-label>Crítica</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Información del Hospital Receptor -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información del Hospital Receptor</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nombre del Hospital</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Dirección</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contacto de Emergencia</ion-label>
+        <ion-input type="tel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Área Asignada</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botones -->
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="block" color="primary">Guardar</ion-button>
+      <ion-button expand="block" color="light">Cancelar</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>reg-causaemergencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+
+    <!-- Selección o Descripción del Motivo de la Llamada -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Motivo de la Llamada</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Seleccionar Motivo</ion-label>
+          <ion-select placeholder="Seleccione el motivo">
+            <ion-select-option value="consulta">Consulta Médica</ion-select-option>
+            <ion-select-option value="emergencia">Emergencia</ion-select-option>
+            <ion-select-option value="seguimiento">Seguimiento</ion-select-option>
+            <ion-select-option value="otro">Otro</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Descripción del Motivo</ion-label>
+          <ion-textarea placeholder="Describa el motivo de la llamada si es necesario"></ion-textarea>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Campo para Notas Adicionales -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Notas Adicionales</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Notas</ion-label>
+          <ion-textarea placeholder="Ingrese cualquier nota adicional sobre la llamada"></ion-textarea>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Botón para Guardar -->
+    <ion-footer>
+      <ion-toolbar>
+        <ion-button expand="block" color="primary">Guardar Detalles</ion-button>
+      </ion-toolbar>
+    </ion-footer>
+  
+  </ion-content>
+</ion-content>

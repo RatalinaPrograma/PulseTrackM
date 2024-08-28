@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>soporte-tecnico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+
+    <!-- Sección de Formulario para Reportar Problemas -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Reportar un Problema o Solicitar Asistencia</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Nombre Completo</ion-label>
+          <ion-input placeholder="Ingresa tu nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Correo Electrónico</ion-label>
+          <ion-input type="email" placeholder="usuario@correo.com"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Asunto</ion-label>
+          <ion-input placeholder="Breve descripción del problema"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Descripción</ion-label>
+          <ion-textarea placeholder="Describe el problema o la solicitud en detalle"></ion-textarea>
+        </ion-item>
+        <ion-button expand="block" color="primary">Enviar Reporte</ion-button>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Sección de Chat de Soporte en Vivo -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Chat de Soporte en Vivo</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item lines="none">
+          <ion-label>
+            <h2>Chat en vivo</h2>
+            <p>Conéctate con un representante</p>
+          </ion-label>
+          <ion-button fill="clear" color="secondary">Iniciar Chat</ion-button>
+        </ion-item>
+        
+        <!-- Simulación de Conversación de Chat -->
+        <ion-list>
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="assets/img/soporte.png" alt="Soporte">
+            </ion-avatar>
+            <ion-label>
+              <h3>Soporte</h3>
+              <p>Hola, ¿en qué puedo ayudarte hoy?</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="assets/img/usuario.png" alt="Usuario">
+            </ion-avatar>
+            <ion-label>
+              <h3>Usuario</h3>
+              <p>Tengo un problema con la configuración...</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  
+  </ion-content>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>historial-casos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Filtros de Búsqueda</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>Rango de Fechas</ion-label>
+      <ion-datetime display-format="DD/MM/YYYY" placeholder="Seleccionar Fecha Inicio"></ion-datetime>
+      <ion-datetime display-format="DD/MM/YYYY" placeholder="Seleccionar Fecha Fin"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tipo de Emergencia</ion-label>
+      <ion-select placeholder="Seleccionar Tipo">
+        <ion-select-option value="accidente">Accidente</ion-select-option>
+        <ion-select-option value="infarto">Infarto</ion-select-option>
+        <ion-select-option value="otro">Otro</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" color="primary">Aplicar Filtros</ion-button>
+  </ion-item-group>
+
+  <!-- Lista de Casos Anteriores -->
+  <!--<ion-list>
+    <ion-item *ngFor="let caso of casosFiltrados">
+      <ion-label>
+        <h2>{{caso.fecha}} - {{caso.tipo}}</h2>
+        <p>Estado: {{caso.estado}}</p>
+        <p>Hospital Receptor: {{caso.hospital}}</p>
+      </ion-label>
+      <ion-button fill="clear" color="secondary" (click)="verDetalles(caso)">Ver Detalles</ion-button>
+    </ion-item>
+  </ion-list>-->
+
+
+  <!-- Opciones de Exportación -->
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Exportar Informes</ion-label>
+    </ion-item-divider>
+    <ion-button expand="block" color="secondary">Exportar como PDF</ion-button>
+    <ion-button expand="block" color="secondary">Exportar como Excel</ion-button>
+  </ion-item-group>
+</ion-content>
