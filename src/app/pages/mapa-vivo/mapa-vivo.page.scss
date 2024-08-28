@@ -1,0 +1,24 @@
+
+#map-placeholder {
+    height: 50vh;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ion-card {
+    margin-top: 20px;
+  }
+  
+  ion-label {
+    font-size: 1.2em;
+    color: #3880ff; /* Color azul predeterminado de Ionic */
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    color: #3880ff;
+  }
+  
