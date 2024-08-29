@@ -23,6 +23,10 @@
         <ion-icon name="construct-outline" slot="start"></ion-icon>
         <ion-label>Soporte técnico</ion-label>
       </ion-item>
+      <ion-item routerLink="/login-paramedico" routerDirection="root">
+        <ion-icon name="exit-outline" slot="start"></ion-icon>
+        <ion-label>Cerrar sesión</ion-label>
+      </ion-item>
 
     </ion-list>
   </ion-content>
@@ -78,27 +82,27 @@
           routerDirection="root">Configuracion notificaciones</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/chat-vivo"
+        <ion-button expand="block" color="tertiary" (click)="irchatvivo()" routerLink="/chat-vivo"
           routerDirection="root">Chat en vivo</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/login-paramedico"
+        <ion-button expand="block" color="tertiary" (click)="irlogin()" routerLink="/login-paramedico"
           routerDirection="root">Login paramédico</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/configuracion-unidad"
+        <ion-button expand="block" color="tertiary" (click)="irconfgunidad()" routerLink="/configuracion-unidad"
           routerDirection="root">Configuracion unidad</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/historial-casos"
+        <ion-button expand="block" color="tertiary" (click)="irHcasos()" routerLink="/historial-casos"
           routerDirection="root">Historial de casos</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/preferencia-hospital"
+        <ion-button expand="block" color="tertiary" (click)="irPhospital()" routerLink="/preferencia-hospital"
           routerDirection="root">Seleccionar preferencia de hospitales</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/soporte-tecnico"
+        <ion-button expand="block" color="tertiary" (click)="irSP()" routerLink="/soporte-tecnico"
           routerDirection="root">Soporte técnico</ion-button>
       </ion-col>
     </ion-row>
