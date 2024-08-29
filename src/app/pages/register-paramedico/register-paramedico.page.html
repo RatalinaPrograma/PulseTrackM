@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="ultraviolet">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="blancohielo">Regístrate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="register-container">
+    <ion-item class="custom-input">
+      <ion-input type="text" label="Rut del paramédico" labelPlacement="floating" placeholder="12.345.678-9" [(ngModel)]="newrut"></ion-input>
+    </ion-item>
+    <ion-item class="custom-input">
+      <ion-input label="Nombre del paramédico" labelPlacement="floating" placeholder="Ingrese un nombre de usuario" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+    <ion-item class="custom-input">
+      <ion-input type="password" label="Contraseña" labelPlacement="floating" placeholder="Ingrese una contraseña" [(ngModel)]="newclave"></ion-input>
+    </ion-item>
+    <ion-item class="custom-input">
+      <ion-input type="password" label="Confirma la Contraseña" labelPlacement="floating" placeholder="Confirma la contraseña" [(ngModel)]="conficlave"></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="purpuranegro" class="custom-button" (click)="validarRegistro()">Registrarse</ion-button>
+    
+    <div class="separator"></div> <!-- Línea de separación -->
+    
+    <p class="login-link">¿Ya tienes una cuenta? 
+      <a href="/login-paramedico" class="login-link-text">Inicia sesión</a>
+    </p>
+  </div>
+</ion-content>

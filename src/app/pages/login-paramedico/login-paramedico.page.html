@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="ultraviolet">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="blancohielo">Inicio de Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="login-container">
+    <ion-item class="custom-input">
+      <ion-input label="Rut" labelPlacement="floating" placeholder="Ingresa tu rut" [(ngModel)]="rut"></ion-input>
+    </ion-item>
+    <ion-item class="custom-input">
+      <ion-input type="password" label="Contraseña" labelPlacement="floating" placeholder="Ingrese su contraseña" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="purpuranegro" class="custom-button" (click)="validarRegistro()">Iniciar sesión</ion-button>
+
+    <div class="separator"></div> <!-- Línea de separación -->
+
+    <p class="register-link">
+      ¿No tienes una cuenta?
+      <a href="/register-paramedico" class="register-link-text"> Regístrate</a>
+    </p>
+  </div>
+</ion-content>
