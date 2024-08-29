@@ -1,23 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Registro de Paramédico</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar color="ultraviolet">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="blancohielo">Registrate</ion-title>
   </ion-toolbar>
 </ion-header>
+<br><br>
 
-<ion-content>
-  <form>
-    <ion-item>
-      <ion-label position="floating">RUT</ion-label>
-      <ion-input [(ngModel)]="paramedico.rut" name="rut" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Nombre</ion-label>
-      <ion-input [(ngModel)]="paramedico.nombre" name="nombre" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Clave</ion-label>
-      <ion-input [(ngModel)]="paramedico.clave" name="clave" type="password" required></ion-input>
-    </ion-item>
-    <ion-button expand="full" (click)="register()">Registrar</ion-button>
-  </form>
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input type="email" label="Correo electonico" labelPlacement="floating" placeholder="Ingrese su Correo electronico" [(ngModel)]="correoEle"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Nombre de Usuario" labelPlacement="floating" placeholder="Ingrese un nombre de usuario" [(ngModel)]="newNameUser"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="password" label="Contraseña" labelPlacement="floating" placeholder="Ingrese una contraseña" [(ngModel)]="newPassword"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="password" label=" Confirma la Contraseña" labelPlacement="floating" placeholder="Confirma la contraseña" [(ngModel)]="confiPassword"></ion-input>
+  </ion-item>
+  <ion-button color="purpuranegro" (click)="validarRegistro()">Registrarse</ion-button>
+  <div class="separator"></div> <!-- Línea de separación -->
+  <p color="blancohielo">¿Ya tienes una cuenta? 
+    <a href="/login-paramedico">Inicia sesión</a>
+  </p>
+
+ 
+
 </ion-content>

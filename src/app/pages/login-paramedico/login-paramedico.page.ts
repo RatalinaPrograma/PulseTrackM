@@ -1,27 +1,49 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavigationExtras, Router } from '@angular/router';
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login-paramedico',
   templateUrl: './login-paramedico.page.html',
   styleUrls: ['./login-paramedico.page.scss'],
 })
-export class LoginParamedicoPage implements OnInit {
-  credentials = {
-    rut: '',
-    clave: ''
-  };
 
-  constructor(private navCtrl: NavController) {}
+export class LoginParamedicoPage implements OnInit {
+  nameUser:string="";
+  password:any;
+
+
+
+  constructor( private router:Router,private alertController: AlertController, private toastController: ToastController) { }
 
   ngOnInit() {
-    // Aquí puedes agregar cualquier lógica de inicialización si es necesario.
+  }
+    async presentAlert(titulo:string, msj:string) {
+    const alert = await this.alertController.create({
+      header: titulo,
+      message: msj,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
+  async presentToast(position: 'top' | 'middle' | 'bottom') {
+    const toast = await this.toastController.create({
+      message: 'Soy un mensaje',
+      duration: 2500,
+      position: position,
+    });
+
+    await toast.present();
+  }
+  irPagina(){
+    let contex:NavigationExtras={
+      state:{
+        nombreUser:this.nameUser
+      }
+    }
+    this.router.navigate(['/home'],contex);
   }
 
-  login() {
-    // Aquí se agregará la lógica para el login en el futuro
-    console.log('Intentando iniciar sesión con:', this.credentials);
-    // Navegar a la página de gestión de paramédicos después de iniciar sesión
-    this.navCtrl.navigateRoot('/home');
-  }
+
 }
