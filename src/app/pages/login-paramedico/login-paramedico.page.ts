@@ -22,6 +22,6 @@ export class LoginParamedicoPage implements OnInit {
     // Aquí se agregará la lógica para el login en el futuro
     console.log('Intentando iniciar sesión con:', this.credentials);
     // Navegar a la página de gestión de paramédicos después de iniciar sesión
-    this.navCtrl.navigateRoot('/nueva-emergencia');
+    this.navCtrl.navigateRoot('/home');
   }
 }
