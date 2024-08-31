@@ -87,11 +87,11 @@
       <ion-card-content>
         <ion-item>
           <ion-label>Disponible para Nuevos Casos</ion-label>
-          <ion-toggle></ion-toggle>
+          <ion-toggle [(ngModel)]="disponibleParaCasos"></ion-toggle>
         </ion-item>
         <ion-item>
           <ion-label>Notificaciones de Emergencia</ion-label>
-          <ion-toggle></ion-toggle>
+          <ion-toggle [(ngModel)]="notificacionesEmergencia"></ion-toggle>
         </ion-item>
       </ion-card-content>
     </ion-card>
@@ -99,7 +99,7 @@
     <!-- Botones de Acción -->
     <ion-footer>
       <ion-toolbar>
-        <ion-button expand="block" color="primary">Guardar Configuración</ion-button>
+        <ion-button expand="block" color="primary" (click)="guardarConfiguracion()">Guardar Configuración</ion-button>
       </ion-toolbar>
     </ion-footer>
   
