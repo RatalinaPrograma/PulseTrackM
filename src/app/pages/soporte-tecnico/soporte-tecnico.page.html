@@ -18,24 +18,25 @@
       <ion-card-content>
         <ion-item>
           <ion-label position="stacked">Nombre Completo</ion-label>
-          <ion-input placeholder="Ingresa tu nombre"></ion-input>
+          <ion-input placeholder="Ingresa tu nombre" [(ngModel)]="nombre"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Correo Electrónico</ion-label>
-          <ion-input type="email" placeholder="usuario@correo.com"></ion-input>
+          <ion-input type="email" placeholder="usuario@correo.com" [(ngModel)]="correo"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Asunto</ion-label>
-          <ion-input placeholder="Breve descripción del problema"></ion-input>
+          <ion-input placeholder="Breve descripción del problema" [(ngModel)]="asunto"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Descripción</ion-label>
-          <ion-textarea placeholder="Describe el problema o la solicitud en detalle"></ion-textarea>
+          <ion-textarea placeholder="Describe el problema o la solicitud en detalle"
+            [(ngModel)]="descripcion"></ion-textarea>
         </ion-item>
-        <ion-button expand="block" color="primary">Enviar Reporte</ion-button>
+        <ion-button expand="block" color="primary" (click)="enviarReporte()">Enviar Reporte</ion-button>
       </ion-card-content>
     </ion-card>
-  
+
     <!-- Sección de Chat de Soporte en Vivo -->
     <ion-card>
       <ion-card-header>
@@ -49,7 +50,7 @@
           </ion-label>
           <ion-button fill="clear" color="secondary">Iniciar Chat</ion-button>
         </ion-item>
-        
+
         <!-- Simulación de Conversación de Chat -->
         <ion-list>
           <ion-item>
@@ -73,6 +74,6 @@
         </ion-list>
       </ion-card-content>
     </ion-card>
-  
+
   </ion-content>
 </ion-content>

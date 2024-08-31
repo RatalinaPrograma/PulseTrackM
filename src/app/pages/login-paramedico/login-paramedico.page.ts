@@ -8,20 +8,20 @@
      styleUrls: ['./login-paramedico.page.scss'],
     })
   export class LoginParamedicoPage  {
-    nameUser!: string;
+    rut!: string;
     password!: string;
   
     // Arreglo para almacenar varios nombres de usuario y contraseñas
     private readonly validUsers = [
-      { username: 'admin', password: '1234' },
-      { username: 'user1', password: 'password1' },
-      { username: 'user2', password: 'password2' }
+      { rut: '123456789', password: '1234' },
+      { rut: '111111111', password: 'password1' },
+      { rut: '222222222', password: 'password2' }
     ];
   
     constructor(private alertController: AlertController, private router: Router) {}
   
     async login() {
-      const user = this.validUsers.find(u => u.username === this.nameUser && u.password === this.password);
+      const user = this.validUsers.find(u => u.rut === this.rut && u.password === this.password);
       
       if (user) {
         // Credenciales correctas, redirigir a la página principal

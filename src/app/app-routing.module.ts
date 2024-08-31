@@ -102,14 +102,7 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
-  },  {
-    path: 'register-paramedico',
-    loadChildren: () => import('./pages/register-paramedico/register-paramedico.module').then( m => m.RegisterParamedicoPageModule)
-  },
-
-
-
-
+  }
 ];
 
 @NgModule({
@@ -118,4 +111,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
