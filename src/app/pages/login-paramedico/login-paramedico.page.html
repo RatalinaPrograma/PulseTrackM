@@ -6,7 +6,6 @@
     <ion-title color="blancohielo">Inicio de Sesión</ion-title>
   </ion-toolbar>
 </ion-header>
-<br><br>
 
 <ion-content [fullscreen]="true">
   <form (ngSubmit)="login()"> <!-- Enlace al método login en el submit del formulario -->
@@ -19,10 +18,11 @@
     <ion-button color="black" type="submit" >Iniciar sesión</ion-button>
   </form>
 
-  <div class="separator"></div> <!-- Línea de separación -->
+    <div class="separator"></div> <!-- Línea de separación -->
 
   <p color="blancohielo" class="register">
     ¿No tienes una cuenta?
     <a href="/register-paramedico"> Regístrate</a>
   </p>
+  
 </ion-content>
