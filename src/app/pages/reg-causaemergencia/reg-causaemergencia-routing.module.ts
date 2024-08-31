@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { RegCausaemergenciaPage } from './reg-causaemergencia.page';
+import { RegCausaEmergenciaPage } from './reg-causaemergencia.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: RegCausaemergenciaPage
+    component: RegCausaEmergenciaPage
   }
 ];
 

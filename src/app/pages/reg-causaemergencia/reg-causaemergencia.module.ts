@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { RegCausaemergenciaPageRoutingModule } from './reg-causaemergencia-routing.module';
 
-import { RegCausaemergenciaPage } from './reg-causaemergencia.page';
+import { RegCausaEmergenciaPage } from './reg-causaemergencia.page';
 
 @NgModule({
   imports: [
@@ -15,6 +15,6 @@ import { RegCausaemergenciaPage } from './reg-causaemergencia.page';
     IonicModule,
     RegCausaemergenciaPageRoutingModule
   ],
-  declarations: [RegCausaemergenciaPage]
+  declarations: [RegCausaEmergenciaPage]
 })
 export class RegCausaemergenciaPageModule {}
