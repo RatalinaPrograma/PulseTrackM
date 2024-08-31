@@ -1,49 +1,39 @@
-import { Component, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
-import { AlertController, ToastController } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
-@Component({
-  selector: 'app-login-paramedico',
+@Component({ selector: 'app-login-paramedico',
   templateUrl: './login-paramedico.page.html',
-  styleUrls: ['./login-paramedico.page.scss'],
-})
+   styleUrls: ['./login-paramedico.page.scss'],
+  })
+export class LoginParamedicoPage {
+  nameUser!: string;
+  password!: string;
 
-export class LoginParamedicoPage implements OnInit {
-  nameUser:string="";
-  password:any;
+  // Arreglo para almacenar varios nombres de usuario y contraseñas
+  private readonly validUsers = [
+    { username: 'admin', password: '1234' },
+    { username: 'user1', password: 'password1' },
+    { username: 'user2', password: 'password2' }
+  ];
 
+  constructor(private alertController: AlertController, private router: Router) {}
 
+  async login() {
+    const user = this.validUsers.find(u => u.username === this.nameUser && u.password === this.password);
+    
+    if (user) {
+      // Credenciales correctas, redirigir a la página principal
+      this.router.navigate(['/home']);
+    } else {
+      // Credenciales incorrectas, mostrar alerta de error
+      const alert = await this.alertController.create({
+        header: 'Error',
+        message: 'Nombre de usuario o contraseña incorrectos.',
+        buttons: ['OK']
+      });
 
-  constructor( private router:Router,private alertController: AlertController, private toastController: ToastController) { }
-
-  ngOnInit() {
-  }
-    async presentAlert(titulo:string, msj:string) {
-    const alert = await this.alertController.create({
-      header: titulo,
-      message: msj,
-      buttons: ['OK'],
-    });
-
-    await alert.present();
-  }
-  async presentToast(position: 'top' | 'middle' | 'bottom') {
-    const toast = await this.toastController.create({
-      message: 'Soy un mensaje',
-      duration: 2500,
-      position: position,
-    });
-
-    await toast.present();
-  }
-  irPagina(){
-    let contex:NavigationExtras={
-      state:{
-        nombreUser:this.nameUser
-      }
+      await alert.present();
     }
-    this.router.navigate(['/home'],contex);
   }
-
-
 }
