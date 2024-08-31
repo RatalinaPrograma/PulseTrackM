@@ -96,10 +96,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login-paramedico/login-paramedico.module').then( m => m.LoginParamedicoPageModule)
   },
   {
-    path: 'manage-paramedicos',
-    loadChildren: () => import('./manage-paramedicos/manage-paramedicos.module').then( m => m.ManageParamedicosPageModule)
-  },
-  {
     path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
   }

@@ -1,56 +1,20 @@
-<ion-menu side="start" menuId="emergenciasMenu" contentId="emergenciasContent">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menú</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content>
-    <ion-list>
-      <ion-item routerLink="/nueva-emergencia" routerDirection="root">
-        <ion-icon name="add-circle-outline" slot="start"></ion-icon>
-        <ion-label>Nueva Emergencia</ion-label>
-      </ion-item>
-      <ion-item routerLink="/historial-casos" routerDirection="root">
-        <ion-icon name="document-text-outline" slot="start"></ion-icon>
-        <ion-label>Historial</ion-label>
-      </ion-item>
-      <ion-item routerLink="/configuracion-noti" routerDirection="root">
-        <ion-icon name="settings-outline" slot="start"></ion-icon>
-        <ion-label>Configuraciones</ion-label>
-      </ion-item>
-      <ion-item routerLink="/soporte-tecnico" routerDirection="root">
-        <ion-icon name="construct-outline" slot="start"></ion-icon>
-        <ion-label>Soporte técnico</ion-label>
-      </ion-item>
-      <ion-item routerLink="/login-paramedico" routerDirection="root">
-        <ion-icon name="exit-outline" slot="start"></ion-icon>
-        <ion-label>Cerrar sesión</ion-label>
-      </ion-item>
-
-    </ion-list>
-  </ion-content>
-</ion-menu>
-
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button menu="emergenciasMenu"></ion-menu-button>
     </ion-buttons>
     <ion-title>Menú principal</ion-title>
-
   </ion-toolbar>
 </ion-header>
 
-
-<ion-content class="background" id="emergenciasContent">
+<ion-content class="background" id="emergenciasContent" style="--background: url('/assets/imgs/emergencias-fondo.png') no-repeat center center / cover;">
 
   <ion-title>
     <div id="reloj">{{horaActual}}</div>
   </ion-title>
 
   <ion-card>
-    <ion-card-header>
+    <ion-card-header color="danger">
       <ion-card-title>Emergencias Activas</ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -66,47 +30,54 @@
     </ion-card-content>
   </ion-card>
 
-
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <ion-button expand="block" color="primary" (click)="nuevaEmergencia()" routerLink="/nueva-emergencia"
-          routerDirection="root">Nueva Emergencia</ion-button>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-azul-claro" routerLink="/nueva-emergencia" routerDirection="root">
+          Nueva Emergencia
+        </ion-button>
       </ion-col>
-      <ion-col>
-        <ion-button expand="block" color="secondary" (click)="verHistorial()" routerLink="/historial-casos"
-          routerDirection="root">Historial</ion-button>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-verde-claro" routerLink="/historial-casos" routerDirection="root">
+          Historial
+        </ion-button>
       </ion-col>
-      <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irConfiguraciones()" routerLink="/configuracion-noti"
-          routerDirection="root">Configuracion notificaciones</ion-button>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-aqua" routerLink="/configuracion-noti" routerDirection="root">
+          Configuración Notificaciones
+        </ion-button>
       </ion-col>
-      <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irchatvivo()" routerLink="/chat-vivo"
-          routerDirection="root">Chat en vivo</ion-button>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-verde-menta" routerLink="/chat-vivo" routerDirection="root">
+          Chat en vivo
+        </ion-button>
       </ion-col>
-      <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irlogin()" routerLink="/login-paramedico"
-          routerDirection="root">Login paramédico</ion-button>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-azul-suave" routerLink="/login-paramedico" routerDirection="root">
+          Login paramédico
+        </ion-button>
       </ion-col>
-      <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irconfgunidad()" routerLink="/configuracion-unidad"
-          routerDirection="root">Configuracion unidad</ion-button>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-verde-pastel" routerLink="/configuracion-unidad" routerDirection="root">
+          Configuración Unidad
+        </ion-button>
       </ion-col>
-      <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irHcasos()" routerLink="/historial-casos"
-          routerDirection="root">Historial de casos</ion-button>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-turquesa-claro" routerLink="/historial-casos" routerDirection="root">
+          Historial de Casos
+        </ion-button>
       </ion-col>
-      <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irPhospital()" routerLink="/preferencia-hospital"
-          routerDirection="root">Seleccionar preferencia de hospitales</ion-button>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-verde-agua" routerLink="/preferencia-hospital" routerDirection="root">
+          Preferencia de Hospitales
+        </ion-button>
       </ion-col>
-      <ion-col>
-        <ion-button expand="block" color="tertiary" (click)="irSP()" routerLink="/soporte-tecnico"
-          routerDirection="root">Soporte técnico</ion-button>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-azul-claro" routerLink="/soporte-tecnico" routerDirection="root">
+          Soporte Técnico
+        </ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
-
 
 </ion-content>

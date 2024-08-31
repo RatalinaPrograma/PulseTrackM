@@ -7,101 +7,149 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-content>
+<ion-content [fullscreen]="true" style="--background: url('/assets/imgs/salud-fondo.png') no-repeat center center / cover;">
+  
+  <!-- Sección de Detalles de la Ambulancia -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Detalles de la Ambulancia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Número de Unidad</ion-label>
+        <ion-text>AMB-1024</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Modelo</ion-label>
+        <ion-text>Ford Transit 2021</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Matrícula</ion-label>
+        <ion-text>XYZ-1234</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Ubicación Actual</ion-label>
+        <ion-text>Centro de Salud Norte</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  
+  <!-- Sección de Equipo Disponible -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Equipo Disponible</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Desfibrilador</ion-label>
+          <ion-text>Disponible</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Oxígeno</ion-label>
+          <ion-text>Completo</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Botiquín</ion-label>
+          <ion-text>Completo</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Camilla</ion-label>
+          <ion-text>Operativa</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  
+  <!-- Sección de Estado de la Unidad -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Estado de la Unidad</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Estado</ion-label>
+        <ion-text>En Servicio</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Último Mantenimiento</ion-label>
+        <ion-text>01/08/2024</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  
+  <!-- Sección de Configuración de Disponibilidad -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Configuración de Disponibilidad</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Disponible para Nuevos Casos</ion-label>
+        <ion-toggle [(ngModel)]="disponibleParaCasos"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Notificaciones de Emergencia</ion-label>
+        <ion-toggle [(ngModel)]="notificacionesEmergencia"></ion-toggle>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  
+  <!-- Botones de Acción -->
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="block" color="primary" class="btn-azul-claro" (click)="guardarConfiguracion()">Guardar Configuración</ion-button>
+    </ion-toolbar>
+  </ion-footer>
 
-    <!-- Sección de Detalles de la Ambulancia -->
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Detalles de la Ambulancia</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item>
-          <ion-label position="stacked">Número de Unidad</ion-label>
-          <ion-text>AMB-1024</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Modelo</ion-label>
-          <ion-text>Ford Transit 2021</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Matrícula</ion-label>
-          <ion-text>XYZ-1234</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Ubicación Actual</ion-label>
-          <ion-text>Centro de Salud Norte</ion-text>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-  
-    <!-- Sección de Equipo Disponible -->
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Equipo Disponible</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-list>
-          <ion-item>
-            <ion-label>Desfibrilador</ion-label>
-            <ion-text>Disponible</ion-text>
-          </ion-item>
-          <ion-item>
-            <ion-label>Oxígeno</ion-label>
-            <ion-text>Completo</ion-text>
-          </ion-item>
-          <ion-item>
-            <ion-label>Botiquín</ion-label>
-            <ion-text>Completo</ion-text>
-          </ion-item>
-          <ion-item>
-            <ion-label>Camilla</ion-label>
-            <ion-text>Operativa</ion-text>
-          </ion-item>
-        </ion-list>
-      </ion-card-content>
-    </ion-card>
-  
-    <!-- Sección de Estado de la Unidad -->
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Estado de la Unidad</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item>
-          <ion-label position="stacked">Estado</ion-label>
-          <ion-text>En Servicio</ion-text>
-        </ion-item>
-        <ion-item>
-          <ion-label position="stacked">Último Mantenimiento</ion-label>
-          <ion-text>01/08/2024</ion-text>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-  
-    <!-- Sección de Configuración de Disponibilidad -->
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Configuración de Disponibilidad</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item>
-          <ion-label>Disponible para Nuevos Casos</ion-label>
-          <ion-toggle [(ngModel)]="disponibleParaCasos"></ion-toggle>
-        </ion-item>
-        <ion-item>
-          <ion-label>Notificaciones de Emergencia</ion-label>
-          <ion-toggle [(ngModel)]="notificacionesEmergencia"></ion-toggle>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-  
-    <!-- Botones de Acción -->
-    <ion-footer>
-      <ion-toolbar>
-        <ion-button expand="block" color="primary" (click)="guardarConfiguracion()">Guardar Configuración</ion-button>
-      </ion-toolbar>
-    </ion-footer>
-  
-  </ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-azul-claro" routerLink="/nueva-emergencia" routerDirection="root">
+          Nueva Emergencia
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-verde-claro" routerLink="/historial-casos" routerDirection="root">
+          Historial
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-aqua" routerLink="/configuracion-noti" routerDirection="root">
+          Configuración Notificaciones
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-verde-menta" routerLink="/chat-vivo" routerDirection="root">
+          Chat en vivo
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-azul-suave" routerLink="/login-paramedico" routerDirection="root">
+          Login paramédico
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-verde-pastel" routerLink="/configuracion-unidad" routerDirection="root">
+          Configuración Unidad
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-turquesa-claro" routerLink="/historial-casos" routerDirection="root">
+          Historial de Casos
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-verde-agua" routerLink="/preferencia-hospital" routerDirection="root">
+          Preferencia de Hospitales
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" class="btn-azul-claro" routerLink="/soporte-tecnico" routerDirection="root">
+          Soporte Técnico
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
